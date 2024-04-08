@@ -20,6 +20,7 @@ button {
 
 address {
     font-style: normal;
+    margin-left: auto;
 }
 
 body {
@@ -39,8 +40,6 @@ img {
 
 .header {
     border-bottom: 1px solid #e7e9fc;
-    padding-top: 24px;
-    padding-bottom: 24px;
 }
 
 .container {
@@ -52,11 +51,11 @@ img {
 
 .header-container {
     display: flex;
+    align-items: center;
 }
 
 .header-nav-list {
     display: flex;
-    gap: 76px;
     align-items: center;
 }
 
@@ -98,7 +97,6 @@ padding: 24px 0;
     display: flex;
     gap: 40px;
     align-items: center;
-    margin-left: 223px;
 }
 
 
@@ -122,7 +120,19 @@ color: #434455;
 
 .hero {
     background: #2e2f42;
-    padding: 188px 0;
+    padding: 188px 15px;
+    background-image: linear-gradient: 
+      (rgba(46, 47, 66, 0.7) 100%, 
+      rgba(46, 47, 66, 0.7)) 100%, 
+     url(../images/hero-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+}
+
+.hero-wrap {
+    
 }
 
 .hero-text {
@@ -133,7 +143,6 @@ letter-spacing: 0.02em;
 text-align: center;
 color: #fff;
 max-width: 496px;
-height: 56px;
 margin: 0 auto;
 margin-bottom: 48px;
 }
@@ -175,15 +184,22 @@ margin: 0 auto;
 }
 
 .priority-list {
-    padding-top: 120px;
-    padding-bottom: 120px;
-    padding-left: 0;
     display: flex;
     gap: 24px;
 }
 
 .priority-item {
     width: calc((100% - 3 * 24px) / 4);
+}
+
+.priority-icon {
+    width: 100%;
+    height: 112px;
+    background-color: #F4F4FD;
+    border: 1px solid #8E8F99;
+    border-radius: 5%;
+    padding: 24px 100px;
+    
 }
 
 .priority-titel {
@@ -215,7 +231,6 @@ letter-spacing: 0.02em;
  letter-spacing: 0.02em;
  text-align: center;
  color: #2e2f42;
- padding-top: 120px;
  margin-bottom: 72px;
 }
 
@@ -227,8 +242,6 @@ letter-spacing: 0.02em;
 .workers-item {
  background: #fff;
  width: 264px;
- height: 380px;
- margin-bottom: 120px;
  border-radius: 0px 0px 4px 4px;
 }
 
@@ -255,6 +268,30 @@ letter-spacing: 0.02em;
  color: #434455;
  text-align: center;
 }
+
+.icon-list {
+  display: flex;
+  gap: 24px;
+}
+
+.icon-item {
+  width: 40px;
+  height: 40px;
+}
+
+.icon-link {
+  width: 100%;
+  height: 100%;
+  background-color: #4d5ae5;
+  border-radius: 50%;
+  display: flex;
+}
+
+.icon-icon {
+  fill:#fff;
+  stroke: #fff;
+}
+
 .our-posibility-section {
     padding-top: 120px; 
     padding-bottom: 120px;
@@ -268,7 +305,6 @@ line-height: 1.11;
 letter-spacing: 0.02em;
 text-align: center;
 color: #2e2f42;
-padding-top: 120px;
 margin-bottom: 72px;
 }
 
@@ -283,15 +319,43 @@ margin-bottom: 72px;
     padding: 32px 16px;
     border: 1px solid #e7e9fc;
     border-top: none;
-    margin-bottom: 8px;
-
 }
 
 .posibility-item {
     background: #fff;
 }
 
+.posibility-item:hover .posibility-cover-text {
+    transform: translateY(0);
+  }
+  
+  .posibility-cover-wrap {
+    position: relative;
+    overflow: hidden;
+  }
 
+  .posibility-cover-text {
+    position: absolute;
+    top: 0;
+    background-color: #4D5AE5;
+    height: 100%;
+    font-size: 14px;
+    line-height: 1.29;
+    letter-spacing: -0.02em;
+    color: #f4f4fd;;
+    padding-left: 32px;
+    padding-right: 32px;
+    display: flex;
+    align-items: center;
+    border-radius: 15px 15px 0 0;
+    transform: translateY(100%);
+    transition: transform 300ms linear;
+    backdrop-filter: blur(15px);
+    background: linear-gradient(
+      161deg,
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    );
 
 .posibility-name {
     font-weight: 500;
@@ -299,9 +363,7 @@ font-size: 20px;
 line-height: 1.2;
 letter-spacing: 0.02em;
 color: #2e2f42;
-margin-top: 32px;
 margin-bottom: 8px;
-padding-left: 16px;
 }
 
 .posibility-type {
@@ -312,12 +374,14 @@ letter-spacing: 0.02em;
 padding-left: 16px;
 }
 
+
 /* ===============================main============================ */
 
 .footer {
     background: #2e2f42;
     padding-top: 100px;
     padding-bottom: 100px;
+    
 }
 
 .footer-logo {
@@ -344,4 +408,12 @@ line-height: 1.5;
 letter-spacing: 0.02em;
 color: #f4f4fd;
 width: 264px;
+}
+
+.soc-media-titel {
+    font-weight: 500;
+font-size: 16px;
+line-height: 1.5;
+letter-spacing: 0.02em;
+color: #fff;
 }
