@@ -423,11 +423,12 @@ img {
 
 .footer-container {
   display: flex;
-  align-items: center;
+  align-items: baseline;
 }
 
 .footer-container-wrap {
-  align-items: baseline;
+  display: flex;
+  align-items: center;
   margin-right: 120px;
 }
 
